@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -13,13 +13,27 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello, I'm Jojo Varghese. I am passionate about data science and love working on projects that involve data analysis, machine learning, and data visualization. I enjoy learning new technologies and solving real-world problems with data-driven solutions.</p>
+        <p id="description">Hello, I'm <span id="title">Jojo Varghese</span>. I am passionate about data science and love working on projects that involve data analysis, machine learning, and data visualization. I enjoy learning new technologies and solving real-world problems with data-driven solutions.</p>
         <ul>
             <li><a href="https://mycredible.info/#2588250677">MyCredible</a></li>
         </ul>
             
     </section>
-
+    <script>
+        // Define an array of titles
+        const titles = ["a Data Analyst", "a Data Scientist","Jojo Varghese"];
+    
+        // Function to rotate titles
+        function rotateTitles() {
+            const titleElement = document.getElementById("title");
+            let currentIndex = titles.indexOf(titleElement.textContent);
+            currentIndex = (currentIndex + 1) % titles.length;
+            titleElement.textContent = titles[currentIndex];
+        }
+    
+        // Rotate titles every 3 seconds
+        setInterval(rotateTitles, 3000);
+    </script>
     <section id="projects">
         <h2>Projects</h2>
         <ul>
@@ -37,13 +51,15 @@
         <ul>
             <li><a href="https://www.linkedin.com/in/jojo-varghese-datastronaut/">LinkedIn</a></li>
             <li><a href="https://github.com/JOCRZ">GitHub</a></li>
+            <li><a href="https://medium.com/@jojo3416jo">Medium</a></li>
+            <li><a href="https://www.hackerrank.com/profile/jojo3416jo">hackerrank</a></li>
             <!-- Add more social links as needed -->
         </ul>
     </section>
 
     <section id="resume">
         <h2>Resume</h2>
-        <p>You can download my resume <a href="https://drive.google.com/your-resume-link">here</a>.</p>
+        <p>You can download my resume <a href="https://drive.google.com/file/d/14_ktPFA0urOpND5SiOz0_mJYP5J_WpIu/view?usp=sharing">here</a>.</p>
     </section>
 
     <section id="Contact Me">
